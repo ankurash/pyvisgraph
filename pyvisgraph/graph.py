@@ -46,13 +46,13 @@ class Point(object):
         return hash(self) < hash(point)
 
     def __str__(self):
-        return "(%.2f, %.2f)" % (self.x, self.y)
+        return "(%.14f, %.14f)" % (self.x, self.y)
 
     def __hash__(self):
         return self.x.__hash__() ^ self.y.__hash__()
 
     def __repr__(self):
-        return "Point(%.2f, %.2f)" % (self.x, self.y)
+        return "Point(%.14f, %.14f)" % (self.x, self.y)
 
 
 class Edge(object):
